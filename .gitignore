@@ -27,6 +27,7 @@ Temporary Items
 
 
 #specific
+/dump/*
 /log/*
 /data/*
 !/data/.keep

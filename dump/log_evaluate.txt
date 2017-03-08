@@ -1,0 +1,1 @@
+Namespace(batch_size=4, dump_dir='dump', gpu=0, model='pointnet_cls', model_path='log/model.ckpt', num_point=1024, visu=True)
