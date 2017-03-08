@@ -3,6 +3,10 @@ Deep neural networks that directly consume point cloud for 3D classification and
 
 ![prediction example](https://github.com/charlesq34/pointnet/blob/master/doc/teaser.png)
 
+### Fix for Python3
+
+This is the pointnet TF library with some monkey patches for python3 & mac os support...
+
 ### Introduction
 This work is based on our [arXiv tech report](https://arxiv.org/abs/1612.00593), where we proposed a novel deep net architecture for point clouds (as unordered point sets). You can also check our [project webpage](http://stanford.edu/~rqi/pointnet) for a deeper introduction.
 
