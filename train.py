@@ -233,7 +233,7 @@ def eval_one_epoch(sess, ops, test_writer):
         file_size = current_data.shape[0]
         num_batches = file_size / BATCH_SIZE
         
-        for batch_idx in range(num_batches):
+        for batch_idx in range(int(num_batches)):
             start_idx = batch_idx * BATCH_SIZE
             end_idx = (batch_idx+1) * BATCH_SIZE
 
