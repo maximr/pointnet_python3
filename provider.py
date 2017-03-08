@@ -12,7 +12,9 @@ if not os.path.exists(DATA_DIR):
 if not os.path.exists(os.path.join(DATA_DIR, 'modelnet40_ply_hdf5_2048')):
     www = 'https://shapenet.cs.stanford.edu/media/modelnet40_ply_hdf5_2048.zip'
     zipfile = os.path.basename(www)
-    os.system('wget %s; unzip %s' % (www, zipfile))
+    #zipfile = "modelnet40_ply_hdf5_2048"
+    os.system('unzip %s' % (www, zipfile))
+    #os.system('curl %s; unzip %s' % (www, zipfile)) #normal line - removed...
     os.system('mv %s %s' % (zipfile[:-4], DATA_DIR))
     os.system('rm %s' % (zipfile))
 
@@ -39,7 +41,7 @@ def rotate_point_cloud(batch_data):
           BxNx3 array, rotated batch of point clouds
     """
     rotated_data = np.zeros(batch_data.shape, dtype=np.float32)
-    for k in xrange(batch_data.shape[0]):
+    for k in range(batch_data.shape[0]):
         rotation_angle = np.random.uniform() * 2 * np.pi
         cosval = np.cos(rotation_angle)
         sinval = np.sin(rotation_angle)
@@ -59,7 +61,7 @@ def rotate_point_cloud_by_angle(batch_data, rotation_angle):
           BxNx3 array, rotated batch of point clouds
     """
     rotated_data = np.zeros(batch_data.shape, dtype=np.float32)
-    for k in xrange(batch_data.shape[0]):
+    for k in range(batch_data.shape[0]):
         #rotation_angle = np.random.uniform() * 2 * np.pi
         cosval = np.cos(rotation_angle)
         sinval = np.sin(rotation_angle)
